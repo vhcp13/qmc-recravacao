@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Recravação | QMC Brasil</title>
+  <meta name="description" content="Calculadora técnica para recravação: calcule sobreposição, porcentagem de sobreposição e altura do pino da recravadeira.">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .calc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .calc-card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .calc-header { background: linear-gradient(135deg, #0A192F 0%, #004C97 100%); padding: 1.25rem 1.5rem; }
+    .calc-header h2 { color: #fff; font-size: 1.1rem; margin: 0; }
+    .calc-header p { color: rgba(255,255,255,0.75); font-size: 0.8rem; margin: 0.25rem 0 0; }
+    .calc-body { padding: 1.5rem; }
+    .field-group { margin-bottom: 1rem; }
+    .field-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #0f172a; margin-bottom: 0.35rem; }
+    .field-group input { width: 100%; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.625rem 1rem; font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+    .field-group input:focus { border-color: #004C97; }
+    .field-group .unit { font-size: 0.75rem; color: #64748b; margin-left: 0.5rem; }
+    .calc-btn { width: 100%; background: #004C97; color: #fff; border: none; border-radius: 6px; padding: 0.75rem; font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+    .calc-btn:hover { background: #003a75; }
+    .calc-result { margin-top: 1rem; padding: 1rem; border-radius: 8px; background: #f1f5f9; display: none; }
+    .calc-result.show { display: block; }
+    .calc-result .res-label { font-size: 0.78rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .calc-result .res-value { font-size: 1.5rem; font-weight: 800; color: #004C97; display: block; }
+    .calc-result .res-status { font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; padding: 0.4rem 0.75rem; border-radius: 4px; display: inline-block; }
+    .status-ok { background: #dcfce7; color: #16a34a; }
+    .status-warn { background: #fef9c3; color: #854d0e; }
+    .status-bad { background: #fee2e2; color: #dc2626; }
+    .formula-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.875rem; margin-top: 1rem; }
+    .formula-box h4 { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+    .formula-box code { font-size: 0.875rem; color: #004C97; font-family: 'Courier New', monospace; display: block; line-height: 1.8; }
+    .ref-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.825rem; }
+    .ref-table th { background: #f1f5f9; padding: 0.5rem 0.75rem; text-align: left; font-weight: 600; color: #0f172a; border-bottom: 2px solid #e2e8f0; }
+    .ref-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #e2e8f0; color: #374151; }
+    .ref-table tr:hover td { background: #f8fafc; }
+    .info-box { background: rgba(0,76,151,0.06); border-left: 3px solid #004C97; padding: 0.875rem 1rem; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #0f172a; margin-top: 1rem; }
+    .info-box strong { color: #004C97; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header"><div class="header-inner"><a href="../index.html" class="site-logo"><img src="../assets/images/logo.svg" alt="QMC Brasil"></a><nav class="site-nav"><a href="../categoria/visao-geral/index.html">Vis&atilde;o Geral</a><a href="../categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a><a href="../categoria/defeitos/index.html">Defeitos</a><a href="../categoria/terminologia/index.html">Terminologia</a><a href="../categoria/como-fazer/index.html">Como Fazer?</a><a href="../calculadora-recravacao/index.html" class="active">Calculadora</a><a href="../glossario.html" class="nav-accent">Gloss&aacute;rio</a></nav><div class="header-search"><span class="search-icon">&#128269;</span><input type="text" placeholder="Buscar..." class="search-input"></div><button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+
+  <div id="search-overlay"></div>
+
+  <div class="main-container">
+    <div class="article-breadcrumb">
+      <a href="../index.html">In&iacute;cio</a>
+      <span>&gt;</span>
+      <span>Calculadora de Recravação</span>
+    </div>
+
+    <h1 class="article-title" style="margin-bottom:0.5rem">&#128290; Calculadora de Recravação Dupla</h1>
+    <p style="color:#64748b;margin-bottom:1rem">Ferramentas de cálculo para os principais parâmetros da recravação dupla. Insira os valores medidos e obtenha os resultados instantaneamente.</p>
+
+    <div class="calc-grid">
+
+      <!-- CALCULADORA DE SOBREPOSIÇÃO -->
+      <div class="calc-card">
+        <div class="calc-header">
+          <h2>Calculadora de Sobreposição</h2>
+          <p>Calcula a sobreposição (overlap) da recravação dupla</p>
+        </div>
+        <div class="calc-body">
+          <div class="field-group">
+            <label>Gancho do Corpo (BH) <span class="unit">mm ou pol.</span></label>
+            <input type="number" id="bh" placeholder="Ex: 1.85" step="0.01">
+          </div>
+          <div class="field-group">
+            <label>Gancho da Tampa (CH) <span class="unit">mm ou pol.</span></label>
+            <input type="number" id="ch" placeholder="Ex: 1.95" step="0.01">
+          </div>
+          <div class="field-group">
+            <label>Comprimento da Recravação (SL) <span class="unit">mm ou pol.</span></label>
+            <input type="number" id="sl" placeholder="Ex: 2.85" step="0.01">
+          </div>
+          <div class="field-group">
+            <label>Espessura do Corpo (BT) <span class="unit">mm ou pol.</span></label>
+            <input type="number" id="bt" placeholder="Ex: 0.21" step="0.001">
+          </div>
+          <div class="field-group">
+            <label>Espessura da Tampa (ET) <span class="unit">mm ou pol.</span></label>
+            <input type="number" id="et" placeholder="Ex: 0.28" step="0.001">
+          </div>
+          <button class="calc-btn" onclick="calcOverlap()">Calcular Sobreposição</button>
+
+          <div class="calc-result" id="overlap-result">
+            <div class="res-label">Sobreposição (Overlap)</div>
+            <span class="res-value" id="overlap-val">--</span>
+            <div class="res-label" style="margin-top:0.75rem">Porcentagem de Sobreposição</div>
+            <span class="res-value" id="ovlp-pct">--</span>
+            <div id="overlap-status"></div>
+          </div>
+
+          <div class="formula-box">
+            <h4>Fórmula</h4>
+            <code>
+              OL = BH + CH + ET - SL<br>
+              OL% = OL &divide; (SL - 2&times;BT - 2&times;ET) &times; 100
+            </code>
+          </div>
+
+          <div class="info-box">
+            <strong>Sobreposição mínima recomendada:</strong> &ge; 1,1 mm (0,044") ou &ge; 45% em latas de alimento.
+          </div>
+        </div>
+      </div>
+
+      <!-- CALCULADORA DE ALTURA DO PINO -->
+      <div class="calc-card">
+        <div class="calc-header">
+          <h2>Calculadora de Altura do Pino</h2>
+          <p>Determina a altura correta do pino da recravadeira</p>
+        </div>
+        <div class="calc-body">
+          <div class="field-group">
+            <label>Altura da Lata Vazia (mm)</label>
+            <input type="number" id="can-height" placeholder="Ex: 118.5" step="0.1">
+          </div>
+          <div class="field-group">
+            <label>Afundamento da Tampa - Countersink (mm)</label>
+            <input type="number" id="cs-depth" placeholder="Ex: 3.2" step="0.01">
+          </div>
+          <div class="field-group">
+            <label>Altura da Recravação (Seam Length) (mm)</label>
+            <input type="number" id="seam-ht" placeholder="Ex: 2.85" step="0.01">
+          </div>
+          <button class="calc-btn" onclick="calcPinHeight()">Calcular Altura do Pino</button>
+
+          <div class="calc-result" id="pin-result">
+            <div class="res-label">Altura do Pino Recomendada</div>
+            <span class="res-value" id="pin-val">--</span>
+            <div id="pin-status" style="margin-top:0.5rem"></div>
+          </div>
+
+          <div class="formula-box">
+            <h4>Referência</h4>
+            <code>
+              Altura do Pino = Altura da Lata<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Afundamento<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Altura da Recravação
+            </code>
+          </div>
+
+          <div class="info-box">
+            <strong>Nota:</strong> Sempre consulte o manual do fabricante da recravadeira para as tolerâncias específicas do seu equipamento.
+          </div>
+        </div>
+      </div>
+
+      <!-- CALCULADORA DE ESPESSURA TEÓRICA -->
+      <div class="calc-card">
+        <div class="calc-header">
+          <h2>Espessura Teórica da Recravação</h2>
+          <p>Calcula a espessura mínima e máxima esperada</p>
+        </div>
+        <div class="calc-body">
+          <div class="field-group">
+            <label>Espessura do Corpo (BT) <span class="unit">mm</span></label>
+            <input type="number" id="bt2" placeholder="Ex: 0.21" step="0.001">
+          </div>
+          <div class="field-group">
+            <label>Espessura da Tampa (ET) <span class="unit">mm</span></label>
+            <input type="number" id="et2" placeholder="Ex: 0.28" step="0.001">
+          </div>
+          <button class="calc-btn" onclick="calcThickness()">Calcular Espessura</button>
+
+          <div class="calc-result" id="thickness-result">
+            <div class="res-label">Espessura Teórica Mínima (5 camadas)</div>
+            <span class="res-value" id="thick-min">--</span>
+            <div class="res-label" style="margin-top:0.75rem">Espessura Teórica Máxima (6 camadas)</div>
+            <span class="res-value" id="thick-max">--</span>
+          </div>
+
+          <div class="formula-box">
+            <h4>Fórmula</h4>
+            <code>
+              Min = 3&times;ET + 2&times;BT (compacto)<br>
+              Max = 3&times;ET + 2&times;BT + folga
+            </code>
+          </div>
+
+          <table class="ref-table" style="margin-top:1rem">
+            <thead>
+              <tr><th>Camadas</th><th>Descrição</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>3x Tampa</td><td>Curl dobrado + tampa</td></tr>
+              <tr><td>2x Corpo</td><td>Flange do corpo</td></tr>
+              <tr><td>+ Compound</td><td>Vedante entre camadas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TABELA DE REFERÊNCIA -->
+      <div class="calc-card">
+        <div class="calc-header">
+          <h2>Tabela de Referência - Valores Típicos</h2>
+          <p>Valores típicos para latas de alimento (referência geral)</p>
+        </div>
+        <div class="calc-body">
+          <table class="ref-table">
+            <thead>
+              <tr><th>Parâmetro</th><th>Mín</th><th>Nom</th><th>Máx</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sobreposição</td><td>1,10 mm</td><td>1,60 mm</td><td>-</td></tr>
+              <tr><td>OL%</td><td>45%</td><td>65%</td><td>-</td></tr>
+              <tr><td>Gancho do Corpo</td><td>1,75 mm</td><td>1,90 mm</td><td>2,30 mm</td></tr>
+              <tr><td>Gancho da Tampa</td><td>1,85 mm</td><td>2,00 mm</td><td>2,40 mm</td></tr>
+              <tr><td>Espaço Livre</td><td>0,10 mm</td><td>0,25 mm</td><td>0,40 mm</td></tr>
+              <tr><td>Afundamento</td><td>3,00 mm</td><td>3,20 mm</td><td>3,50 mm</td></tr>
+              <tr><td>Ruga (Tightness)</td><td>-</td><td>2</td><td>3</td></tr>
+            </tbody>
+          </table>
+
+          <div class="info-box" style="margin-top:1rem">
+            <strong>Atenção:</strong> Estes valores são apenas referência geral. Sempre utilize as especificações do fabricante da lata e da recravadeira para o seu caso específico.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><div class="logo-row"><img src="../assets/images/logo.svg" alt="QMC Brasil"><h3>QMC Brasil</h3></div><p>Portal t&eacute;cnico sobre recrava&ccedil;&atilde;o dupla de latas met&aacute;licas em portugu&ecirc;s. Conte&uacute;do produzido pela equipe QMC Brasil.</p></div><div class="footer-col"><h4>Categorias</h4><ul><li><a href="../categoria/visao-geral/index.html">Vis&atilde;o Geral</a></li><li><a href="../categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a></li><li><a href="../categoria/defeitos/index.html">Defeitos</a></li><li><a href="../categoria/terminologia/index.html">Terminologia</a></li><li><a href="../categoria/como-fazer/index.html">Como Fazer?</a></li></ul></div><div class="footer-col"><h4>Recursos</h4><ul><li><a href="../glossario.html">Gloss&aacute;rio T&eacute;cnico</a></li><li><a href="../calculadora-recravacao/index.html">Calculadora de Recrava&ccedil;&atilde;o</a></li><li><a href="../index.html">P&aacute;gina Inicial</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 QMC Brasil - Todos os direitos reservados.</span></div></footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function calcOverlap() {
+      const bh = parseFloat(document.getElementById('bh').value);
+      const ch = parseFloat(document.getElementById('ch').value);
+      const sl = parseFloat(document.getElementById('sl').value);
+      const bt = parseFloat(document.getElementById('bt').value);
+      const et = parseFloat(document.getElementById('et').value);
+
+      if (isNaN(bh) || isNaN(ch) || isNaN(sl) || isNaN(bt) || isNaN(et)) {
+        alert('Por favor, preencha todos os campos antes de calcular.');
+        return;
+      }
+
+      const ol = bh + ch + et - sl;
+      const denominator = sl - 2 * bt - 2 * et;
+      const olPct = denominator > 0 ? (ol / denominator) * 100 : 0;
+
+      const res = document.getElementById('overlap-result');
+      document.getElementById('overlap-val').textContent = ol.toFixed(3) + ' mm';
+      document.getElementById('ovlp-pct').textContent = olPct.toFixed(1) + '%';
+
+      let statusHtml = '';
+      if (ol >= 1.1 && olPct >= 45) {
+        statusHtml = '<span class="res-status status-ok">&#10003; Dentro do especificado</span>';
+      } else if (ol >= 0.8) {
+        statusHtml = '<span class="res-status status-warn">&#9888; Atenção - verificar especificação</span>';
+      } else {
+        statusHtml = '<span class="res-status status-bad">&#10007; Abaixo do mínimo - verificar imediatamente</span>';
+      }
+      document.getElementById('overlap-status').innerHTML = statusHtml;
+      res.classList.add('show');
+    }
+
+    function calcPinHeight() {
+      const canH = parseFloat(document.getElementById('can-height').value);
+      const cs = parseFloat(document.getElementById('cs-depth').value);
+      const seam = parseFloat(document.getElementById('seam-ht').value);
+
+      if (isNaN(canH) || isNaN(cs) || isNaN(seam)) {
+        alert('Por favor, preencha todos os campos antes de calcular.');
+        return;
+      }
+
+      const pin = canH - cs + seam;
+      const res = document.getElementById('pin-result');
+      document.getElementById('pin-val').textContent = pin.toFixed(2) + ' mm';
+      document.getElementById('pin-status').innerHTML = '<span class="res-status status-ok">Consulte as tolerâncias do fabricante (tipicamente &plusmn;0,1 mm)</span>';
+      res.classList.add('show');
+    }
+
+    function calcThickness() {
+      const bt = parseFloat(document.getElementById('bt2').value);
+      const et = parseFloat(document.getElementById('et2').value);
+
+      if (isNaN(bt) || isNaN(et)) {
+        alert('Por favor, preencha todos os campos antes de calcular.');
+        return;
+      }
+
+      const thickMin = 3 * et + 2 * bt;
+      const thickMax = thickMin + 0.15; // tolerância típica
+
+      const res = document.getElementById('thickness-result');
+      document.getElementById('thick-min').textContent = thickMin.toFixed(3) + ' mm';
+      document.getElementById('thick-max').textContent = thickMax.toFixed(3) + ' mm';
+      res.classList.add('show');
+    }
+  </script>
+</body>
+</html>
