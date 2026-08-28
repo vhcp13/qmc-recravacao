@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico de Defeitos de Recravação | QMC Brasil</title>
+<meta name="description" content="Identifique defeitos de recravação dupla rapidamente. Clique no defeito que você está vendo e acesse o artigo com causas e soluções.">
+<link rel="icon" href="/conhecimento/assets/images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/conhecimento/assets/css/style.css">
+<style>
+.diag-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.25rem 0}
+.diag-filter{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:.35rem 1rem;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;color:#374151;font-family:inherit}
+.diag-filter:hover,.diag-filter.active{background:#004C97;color:#fff;border-color:#004C97}
+.diag-filter.f-critico.active{background:#dc2626;border-color:#dc2626}
+.diag-filter.f-menor.active{background:#d97706;border-color:#d97706}
+.diag-filter.f-dimensional.active{background:#1d4ed8;border-color:#1d4ed8}
+.diag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem;margin-top:1rem}
+.diag-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:1.1rem;text-decoration:none;color:#0f172a;transition:all .2s;display:block;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.diag-card:hover{border-color:#004C97;box-shadow:0 4px 16px rgba(0,76,151,.15);transform:translateY(-2px);color:#004C97}
+.diag-icon{font-size:1.75rem;margin-bottom:.4rem;display:block;line-height:1}
+.diag-name{font-weight:700;font-size:.92rem;margin-bottom:.2rem;line-height:1.3}
+.diag-name-en{font-size:.72rem;color:#64748b;font-style:italic}
+.diag-desc{font-size:.78rem;color:#64748b;margin-top:.4rem;line-height:1.5}
+.tag{display:inline-block;border-radius:4px;padding:.12rem .45rem;font-size:.68rem;font-weight:700;margin-top:.5rem}
+.tag-critico{background:#fee2e2;color:#dc2626}
+.tag-menor{background:#fef9c3;color:#854d0e}
+.tag-dimensional{background:#dbeafe;color:#1d4ed8}
+.diag-intro{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem;font-size:.9rem;color:#374151;line-height:1.6}
+.diag-intro strong{color:#004C97}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/conhecimento/" class="site-logo"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></a><nav class="site-nav"><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a><div class="nav-dropdown"><span>Ferramentas &#9660;</span><div class="nav-dropdown-menu"><a href="/conhecimento/calculadora-recravacao/index.html"><span class="dd-icon">&#129518;</span>Calculadora</a><a href="/conhecimento/glossario.html"><span class="dd-icon">&#128214;</span>Gloss&aacute;rio EN-PT</a><a href="/conhecimento/diagnostico/index.html"><span class="dd-icon">&#128269;</span>Diagn&oacute;stico de Defeitos</a><a href="/conhecimento/checklist/index.html"><span class="dd-icon">&#9989;</span>Checklists de Inspe&ccedil;&atilde;o</a><a href="/conhecimento/especificacoes/index.html"><span class="dd-icon">&#128207;</span>Tabelas de Especifica&ccedil;&atilde;o</a><a href="/conhecimento/faq/index.html"><span class="dd-icon">&#10067;</span>Perguntas Frequentes</a><a href="/conhecimento/normas/index.html"><span class="dd-icon">&#128203;</span>Normas e Regulamentos</a></div></div></nav><div class="header-search"><span class="search-icon">&#128269;</span><input type="text" placeholder="Buscar..." class="search-input"></div><button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+<div id="search-overlay"></div>
+
+<div class="main-container">
+  <div class="article-breadcrumb"><a href="/conhecimento/">In&iacute;cio</a><span>&gt;</span><span>Diagn&oacute;stico de Defeitos</span></div>
+  <h1 class="article-title">&#128269; Diagn&oacute;stico de Defeitos de Recrava&ccedil;&atilde;o</h1>
+
+  <div class="diag-intro">
+    <strong>Identificou um defeito?</strong> Clique no card correspondente para acessar o artigo completo com causas, solu&ccedil;&otilde;es e como prevenir. Use os filtros abaixo para filtrar por gravidade.
+  </div>
+
+  <div class="diag-filters">
+    <button class="diag-filter active" data-filter="todos">&#9733; Todos (27)</button>
+    <button class="diag-filter f-critico" data-filter="critico">&#128680; Cr&iacute;ticos</button>
+    <button class="diag-filter f-menor" data-filter="menor">&#9888;&#65039; Menores</button>
+    <button class="diag-filter f-dimensional" data-filter="dimensional">&#128207; Dimensionais</button>
+  </div>
+
+  <div class="diag-grid">
+
+    <a href="/conhecimento/artigos/recravacao-falsa/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#9888;&#65039;</span>
+      <div class="diag-name">Recrava&ccedil;&atilde;o Falsa</div>
+      <div class="diag-name-en">False Seam</div>
+      <p class="diag-desc">Gancho n&atilde;o se formou corretamente &mdash; aus&ecirc;ncia de fechamento herm&eacute;tico.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/recravacao-partida/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#128165;</span>
+      <div class="diag-name">Recrava&ccedil;&atilde;o Partida</div>
+      <div class="diag-name-en">Split Seam</div>
+      <p class="diag-desc">Fratura na recrava&ccedil;&atilde;o &mdash; hermeticidade completamente comprometida.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/recravacao-saltada/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#128275;</span>
+      <div class="diag-name">Recrava&ccedil;&atilde;o Saltada</div>
+      <div class="diag-name-en">Sprung Seam</div>
+      <p class="diag-desc">Recrava&ccedil;&atilde;o se abre em &acirc;ngulo anormal, perda de hermeticidade.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/deadhead-tampa-solta/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#128680;</span>
+      <div class="diag-name">Tampa Solta</div>
+      <div class="diag-name-en">Deadhead</div>
+      <p class="diag-desc">Tampa pressionada mas n&atilde;o recravada &mdash; falha total de hermeticidade.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/retencao-de-produto/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#129514;</span>
+      <div class="diag-name">Reten&ccedil;&atilde;o de Produto</div>
+      <div class="diag-name-en">Product Entrapment</div>
+      <p class="diag-desc">Produto preso dentro da recrava&ccedil;&atilde;o, contaminando o fechamento.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/ruga-recravacao/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">〰️</span>
+      <div class="diag-name">Ruga na Recrava&ccedil;&atilde;o</div>
+      <div class="diag-name-en">Wrinkle</div>
+      <p class="diag-desc">Dobras na recrava&ccedil;&atilde;o que podem comprometer a hermeticidade.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/queda-de-recravacao/index.html" class="diag-card" data-severity="critico">
+      <span class="diag-icon">&#128313;</span>
+      <div class="diag-name">Queda de Recrava&ccedil;&atilde;o</div>
+      <div class="diag-name-en">Droop / False Seam</div>
+      <p class="diag-desc">Recrava&ccedil;&atilde;o com queda local &mdash; gancho falso localizado.</p>
+      <span class="tag tag-critico">Cr&iacute;tico</span>
+    </a>
+
+    <a href="/conhecimento/artigos/recravacao-afiada/index.html" class="diag-card" data-severity="menor">
+      <span class="diag-icon">✂️</span>
+      <div class="diag-name">Recrava&ccedil;&atilde;o Afiada</div>
+      <div class="diag-name-en">Sharp Seam</div>
+      <p class="diag-desc">Borda cortante na recrava&ccedil;&atilde;o, risco de corte na linha e no consumidor.</p>
+      <span class="tag tag-menor">Menor</span>
+    </a>
+
+    <a href="/conhecimento/artigos/espora/index.html" class="diag-card" data-severity="menor">
+      <span class="diag-icon">&#128297;</span>
+      <div class="diag-name">Espora</div>
+      <div class="diag-name-en">Spur</div>
+      <p class="diag-desc">Proje&ccedil;&atilde;o met&aacute;lica pontiaguda na borda da recrava&ccedil;&atilde;o.</p>
+      <span class="tag tag-menor">Menor</span>
+    </a>
+
+    <a href="/conhecimento/artigos/vees-defeito-recravacao/index.html" class="diag-card" data-severity="menor">
+      <span class="diag-icon" style="font-weight:900;font-size:1.5rem;color:#374151">V</span>
+      <div class="diag-name">Vees</div>
+      <div class="diag-name-en">Vees Defect</div>
+      <p class="diag-desc">Marcas em forma de V na borda externa da recrava&ccedil;&atilde;o.</p>
+      <span class="tag tag-menor">Menor</span>
+    </a>
+
+    <a href="/conhecimento/artigos/flange-amassado/index.html" class="diag-card" data-severity="menor">
+      <span class="diag-icon">🪛</span>
+      <div class="diag-name">Flange Amassado</div>
+      <div class="diag-name-en">Knockdown Flange</div>
+      <p class="diag-desc">Flange do corpo danificado antes da recrava&ccedil;&atilde;o, causa rugas.</p>
+      <span class="tag tag-menor">Menor</span>
+    </a>
+
+    <a href="/conhecimento/artigos/chuck-rachado/index.html" class="diag-card" data-severity="menor">
+      <span class="diag-icon">&#128295;</span>
+      <div class="diag-name">Chuck Rachado</div>
+      <div class="diag-name-en">Cracked Chuck</div>
+      <p class="diag-desc">Dano no chuck da recravadeira transferido para a superf&iacute;cie da lata.</p>
+      <span class="tag tag-menor">Menor</span>
+    </a>
+
+    <a href="/conhecimento/artigos/gancho-corpo-curto/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128207;</span>
+      <div class="diag-name">Gancho do Corpo Curto</div>
+      <div class="diag-name-en">Short Body Hook</div>
+      <p class="diag-desc">Gancho do corpo abaixo do m&iacute;nimo &mdash; risco de recrava&ccedil;&atilde;o falsa.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/gancho-corpo-longo/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128208;</span>
+      <div class="diag-name">Gancho do Corpo Longo</div>
+      <div class="diag-name-en">Long Body Hook</div>
+      <p class="diag-desc">Gancho do corpo acima do m&aacute;ximo &mdash; causa rugas excessivas.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/gancho-tampa-curto/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128207;</span>
+      <div class="diag-name">Gancho da Tampa Curto</div>
+      <div class="diag-name-en">Short Cover Hook</div>
+      <p class="diag-desc">Gancho da tampa abaixo do m&iacute;nimo &mdash; risco de recrava&ccedil;&atilde;o falsa.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/gancho-tampa-longo/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128208;</span>
+      <div class="diag-name">Gancho da Tampa Longo</div>
+      <div class="diag-name-en">Long Cover Hook</div>
+      <p class="diag-desc">Gancho da tampa acima do m&aacute;ximo &mdash; causa rugas.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/sobreposicao/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128313;</span>
+      <div class="diag-name">Sobreposi&ccedil;&atilde;o Baixa</div>
+      <div class="diag-name-en">Low Overlap</div>
+      <p class="diag-desc">Sobreposi&ccedil;&atilde;o dos ganchos abaixo do m&iacute;nimo aceit&aacute;vel (45%).</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/sobreposicao-gancho-corpo/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128314;</span>
+      <div class="diag-name">Sobreposi&ccedil;&atilde;o Alta BH</div>
+      <div class="diag-name-en">High BH Overlap</div>
+      <p class="diag-desc">Sobreposi&ccedil;&atilde;o excessiva do gancho do corpo.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/folga-da-recravacao/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128270;</span>
+      <div class="diag-name">Folga Alta da Recrava&ccedil;&atilde;o</div>
+      <div class="diag-name-en">High Seam Gap</div>
+      <p class="diag-desc">Espa&ccedil;o interno excessivo &mdash; recrava&ccedil;&atilde;o frouxa.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/espessura-recravacao-apertada/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128220;</span>
+      <div class="diag-name">Espessura Apertada</div>
+      <div class="diag-name-en">Tight Seam Thickness</div>
+      <p class="diag-desc">Espessura da recrava&ccedil;&atilde;o abaixo do m&iacute;nimo &mdash; ganchos esmagados.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/comprimento-recravacao-longo/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#8596;&#65039;</span>
+      <div class="diag-name">Comprimento Longo</div>
+      <div class="diag-name-en">Long Seam Length</div>
+      <p class="diag-desc">Comprimento da recrava&ccedil;&atilde;o fora da especifica&ccedil;&atilde;o.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/afundamento-profundo/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#11015;&#65039;</span>
+      <div class="diag-name">Afundamento Profundo</div>
+      <div class="diag-name-en">Deep Countersink</div>
+      <p class="diag-desc">Afundamento da tampa excessivamente profundo, afeta altura da recrava&ccedil;&atilde;o.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/primeira-operacao-frouxa/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128260;</span>
+      <div class="diag-name">1&ordf; Opera&ccedil;&atilde;o Frouxa</div>
+      <div class="diag-name-en">Loose 1st Operation</div>
+      <p class="diag-desc">Configura&ccedil;&atilde;o da 1&ordf; opera&ccedil;&atilde;o frouxa &mdash; causa ganchos curtos.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/primeira-operacao-apertada/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128260;</span>
+      <div class="diag-name">1&ordf; Opera&ccedil;&atilde;o Apertada</div>
+      <div class="diag-name-en">Tight 1st Operation</div>
+      <p class="diag-desc">Configura&ccedil;&atilde;o da 1&ordf; opera&ccedil;&atilde;o apertada &mdash; causa rugas e espora.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/segunda-operacao-frouxa/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128260;</span>
+      <div class="diag-name">2&ordf; Opera&ccedil;&atilde;o Frouxa</div>
+      <div class="diag-name-en">Loose 2nd Operation</div>
+      <p class="diag-desc">Configura&ccedil;&atilde;o da 2&ordf; opera&ccedil;&atilde;o frouxa &mdash; recrava&ccedil;&atilde;o frouxa.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/segunda-operacao-apertada/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#128260;</span>
+      <div class="diag-name">2&ordf; Opera&ccedil;&atilde;o Apertada</div>
+      <div class="diag-name-en">Tight 2nd Operation</div>
+      <p class="diag-desc">Configura&ccedil;&atilde;o da 2&ordf; opera&ccedil;&atilde;o apertada &mdash; causa esmagamento dos ganchos.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+    <a href="/conhecimento/artigos/retorno-elastico/index.html" class="diag-card" data-severity="dimensional">
+      <span class="diag-icon">&#8617;&#65039;</span>
+      <div class="diag-name">Retorno El&aacute;stico</div>
+      <div class="diag-name-en">Springback</div>
+      <p class="diag-desc">Metal retorna ap&oacute;s a recrava&ccedil;&atilde;o, alterando as dimens&otilde;es finais.</p>
+      <span class="tag tag-dimensional">Dimensional</span>
+    </a>
+
+  </div>
+
+  <div style="margin-top:2rem;padding:1rem 1.25rem;background:#f0f9ff;border-radius:10px;border:1px solid #bae6fd;font-size:.875rem;color:#0c4a6e">
+    <strong>&#128161; Dica:</strong> Para defeitos cr&iacute;ticos (Falsa, Partida, Saltada, Deadhead), pare a linha imediatamente e realize an&aacute;lise de causa raiz antes de retomar a produ&ccedil;&atilde;o. Use nossos <a href="/conhecimento/checklist/index.html" style="color:#004C97">Checklists de Inspe&ccedil;&atilde;o</a> para registro.
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><div class="logo-row"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></div><p>Portal t&eacute;cnico sobre recrava&ccedil;&atilde;o dupla de latas met&aacute;licas em portugu&ecirc;s. Conte&uacute;do produzido pela equipe QMC Brasil.</p></div><div class="footer-col"><h4>Categorias</h4><ul><li><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a></li><li><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a></li><li><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a></li><li><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a></li><li><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a></li></ul></div><div class="footer-col"><h4>Ferramentas</h4><ul><li><a href="/conhecimento/glossario.html">Gloss&aacute;rio T&eacute;cnico</a></li><li><a href="/conhecimento/calculadora-recravacao/index.html">Calculadora</a></li><li><a href="/conhecimento/diagnostico/index.html">Diagn&oacute;stico de Defeitos</a></li><li><a href="/conhecimento/checklist/index.html">Checklists de Inspe&ccedil;&atilde;o</a></li><li><a href="/conhecimento/especificacoes/index.html">Tabelas de Especifica&ccedil;&atilde;o</a></li><li><a href="/conhecimento/faq/index.html">Perguntas Frequentes</a></li><li><a href="/conhecimento/normas/index.html">Normas e Regulamentos</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 QMC Brasil - Todos os direitos reservados.</span></div></footer>
+<a href="https://wa.me/5519331221497?text=Ol%C3%A1!%20Vi%20o%20portal%20t%C3%A9cnico%20da%20QMC%20Brasil%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" id="whatsapp-float" aria-label="Falar no WhatsApp" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.25);text-decoration:none;transition:transform 0.2s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script>
+document.querySelectorAll('.diag-filter').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.diag-filter').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    const f=this.dataset.filter;
+    document.querySelectorAll('.diag-card').forEach(c=>{
+      c.style.display=(f==='todos'||c.dataset.severity===f)?'block':'none';
+    });
+  });
+});
+</script>
+<script src="/conhecimento/assets/js/main.js"></script>
+</body></html>

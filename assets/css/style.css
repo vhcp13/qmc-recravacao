@@ -1246,3 +1246,31 @@ h1, h2, h3, h4, h5 {
 /* =============================================
    FIM MELHORIAS VISUAIS
 ============================================= */
+/* =============================================
+   DROPDOWN "FERRAMENTAS" NO NAV
+============================================= */
+.nav-dropdown { position: relative; }
+.nav-dropdown > span {
+  color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500;
+  cursor: pointer; padding: 0.25rem 0; display: inline-flex; align-items: center;
+  gap: 0.3rem; white-space: nowrap; transition: color 0.2s; user-select: none;
+}
+.nav-dropdown:hover > span { color: var(--color-accent); }
+.nav-dropdown-menu {
+  display: none; position: absolute; top: calc(100% + 0.6rem); right: 0;
+  background: #fff; border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  min-width: 235px; padding: 0.375rem 0; z-index: 200;
+  border: 1px solid var(--color-border); animation: ddIn 0.15s ease;
+}
+@keyframes ddIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 1.1rem; color: var(--color-text); font-size: 0.875rem;
+  text-decoration: none; transition: background 0.13s, color 0.13s;
+  border-bottom: 1px solid #f1f5f9;
+}
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { background: var(--color-sidebar-bg); color: var(--color-primary); }
+.nav-dropdown-menu .dd-icon { font-size: 0.95rem; flex-shrink: 0; width: 1.2rem; text-align: center; }

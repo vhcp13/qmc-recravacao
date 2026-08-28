@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normas e Regulamentos &mdash; Recravação Dupla | QMC Brasil</title>
+  <meta name="description" content="Resumo das principais normas que regulam a inspeção de recravação dupla: FDA 21 CFR 113, APHA, FSSC 22000, BRC e normas brasileiras.">
+  <link rel="stylesheet" href="/conhecimento/assets/css/style.css">
+  <style>
+    .normas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0}
+    .norma-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .norma-header{padding:1.25rem 1.5rem}
+    .norma-fda{background:linear-gradient(135deg,#1e3a5f,#004C97)}
+    .norma-apha{background:linear-gradient(135deg,#064e3b,#047857)}
+    .norma-food{background:linear-gradient(135deg,#78350f,#b45309)}
+    .norma-abnt{background:linear-gradient(135deg,#1e3a5f,#15803d)}
+    .norma-ind{background:linear-gradient(135deg,#581c87,#7c3aed)}
+    .norma-badge{display:inline-block;background:rgba(255,255,255,.2);color:#fff;border-radius:4px;padding:.15rem .5rem;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+    .norma-header h2{color:#fff;font-size:1rem;margin:0}
+    .norma-header p{color:rgba(255,255,255,.75);font-size:.78rem;margin:.3rem 0 0}
+    .norma-body{padding:1.25rem 1.5rem}
+    .norma-body h3{font-size:.78rem;font-weight:700;color:#0f172a;margin:.75rem 0 .3rem;text-transform:uppercase;letter-spacing:.04em}
+    .norma-body h3:first-child{margin-top:0}
+    .norma-body ul{list-style:none;padding:0;margin:0 0 .5rem}
+    .norma-body ul li{font-size:.875rem;color:#374151;padding:.25rem 0 .25rem 1.25rem;position:relative}
+    .norma-body ul li::before{content:"&#x2713;";position:absolute;left:0;color:#16a34a;font-weight:700}
+    .norma-note{background:#f8fafc;border-left:3px solid #004C97;padding:.6rem .875rem;border-radius:0 6px 6px 0;font-size:.8rem;color:#374151;margin-top:.75rem}
+    .req-table{width:100%;border-collapse:collapse;margin-top:1.5rem;font-size:.825rem;border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+    .req-table th{background:linear-gradient(135deg,#0A192F,#004C97);color:#fff;padding:.65rem 1rem;text-align:left;font-size:.78rem;font-weight:600}
+    .req-table td{padding:.6rem 1rem;border-bottom:1px solid #f1f5f9;color:#374151;vertical-align:top;font-size:.85rem}
+    .req-table tr:last-child td{border-bottom:none}
+    .req-table tr:nth-child(even) td{background:#f8fafc}
+    .badge-obrig{background:#fee2e2;color:#dc2626;border-radius:4px;padding:.1rem .45rem;font-size:.68rem;font-weight:700}
+    .badge-recom{background:#dcfce7;color:#16a34a;border-radius:4px;padding:.1rem .45rem;font-size:.68rem;font-weight:700}
+    .badge-na{background:#f1f5f9;color:#64748b;border-radius:4px;padding:.1rem .45rem;font-size:.68rem;font-weight:700}
+    .cta-normas{background:linear-gradient(135deg,#0A192F,#004C97);border-radius:12px;padding:1.5rem;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+    .cta-normas a{background:#eab308;color:#0A192F;padding:.6rem 1.25rem;border-radius:8px;font-weight:700;font-size:.875rem;text-decoration:none;white-space:nowrap}
+  </style>
+</head>
+<body>
+
+<header class="site-header"><div class="header-inner"><a href="/conhecimento/" class="site-logo"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></a><nav class="site-nav"><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a><div class="nav-dropdown"><span>Ferramentas &#9660;</span><div class="nav-dropdown-menu"><a href="/conhecimento/calculadora-recravacao/index.html"><span class="dd-icon">&#129518;</span>Calculadora</a><a href="/conhecimento/glossario.html"><span class="dd-icon">&#128214;</span>Gloss&aacute;rio EN-PT</a><a href="/conhecimento/diagnostico/index.html"><span class="dd-icon">&#128269;</span>Diagn&oacute;stico de Defeitos</a><a href="/conhecimento/checklist/index.html"><span class="dd-icon">&#9989;</span>Checklists de Inspe&ccedil;&atilde;o</a><a href="/conhecimento/especificacoes/index.html"><span class="dd-icon">&#128207;</span>Tabelas de Especifica&ccedil;&atilde;o</a><a href="/conhecimento/faq/index.html"><span class="dd-icon">&#10067;</span>Perguntas Frequentes</a><a href="/conhecimento/normas/index.html"><span class="dd-icon">&#128203;</span>Normas e Regulamentos</a></div></div></nav><div class="header-search"><span class="search-icon">&#128269;</span><input type="text" placeholder="Buscar..." class="search-input"></div><button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+<div id="search-overlay"></div>
+
+<main class="main-content" style="max-width:1200px;margin:0 auto;padding:2rem 1.5rem">
+
+  <h1 style="font-size:2rem;font-weight:800;color:#0A192F;margin-bottom:.5rem">&#x1F4CB; Normas e Regulamentos &mdash; Recrava&ccedil;&atilde;o Dupla</h1>
+  <p style="color:#64748b;font-size:1rem;max-width:760px;margin-bottom:1.5rem">
+    A recrava&ccedil;&atilde;o dupla &eacute; um processo cr&iacute;tico de seguran&ccedil;a alimentar e est&aacute; sujeita a regulamenta&ccedil;&otilde;es nacionais e internacionais.
+    Conhe&ccedil;a as principais normas que estabelecem requisitos de inspe&ccedil;&atilde;o, frequ&ecirc;ncia, registros e treinamento para opera&ccedil;&otilde;es com latas met&aacute;licas.
+  </p>
+
+  <div class="normas-grid">
+
+    <!-- CARD 1: FDA 21 CFR 113 -->
+    <div class="norma-card">
+      <div class="norma-header norma-fda">
+        <span class="norma-badge">EUA | Federal</span>
+        <h2>FDA 21 CFR Parte 113</h2>
+        <p>Alimentos de Baixa Acidez &mdash; Regulamento Federal dos EUA</p>
+      </div>
+      <div class="norma-body">
+        <h3>O que &eacute;</h3>
+        <ul>
+          <li>Regulamento federal americano para alimentos processados termicamente com pH &gt; 4,6</li>
+          <li>Estabelece requisitos m&iacute;nimos para o fechamento herm&eacute;tico de latas met&aacute;licas</li>
+          <li>Administrado pela FDA (Food and Drug Administration)</li>
+        </ul>
+        <h3>Requisitos de Recrava&ccedil;&atilde;o</h3>
+        <ul>
+          <li>Inspe&ccedil;&atilde;o visual e dimensional a cada 4 horas (&sect;113.60)</li>
+          <li>Registros de inspe&ccedil;&atilde;o mantidos por m&iacute;nimo 3 anos</li>
+          <li>Operadores devem ser certificados em curso aprovado</li>
+          <li>Calibra&ccedil;&atilde;o de equipamentos documentada</li>
+          <li>Desvios de processo documentados e analisados</li>
+        </ul>
+        <div class="norma-note">
+          &#x26A0;&#xFE0F; <strong>Obrigat&oacute;rio</strong> para exportar produtos enlatados para os Estados Unidos.
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: APHA -->
+    <div class="norma-card">
+      <div class="norma-header norma-apha">
+        <span class="norma-badge">Internacional | M&eacute;todo</span>
+        <h2>APHA &mdash; M&eacute;todo de Inspe&ccedil;&atilde;o</h2>
+        <p>American Public Health Association &mdash; padr&atilde;o de refer&ecirc;ncia</p>
+      </div>
+      <div class="norma-body">
+        <h3>O que &eacute;</h3>
+        <ul>
+          <li>Metodologia internacional para inspe&ccedil;&atilde;o visual e dimensional de recrava&ccedil;&otilde;es</li>
+          <li>Define nomenclatura, procedimentos de teardown e crit&eacute;rios de aceita&ccedil;&atilde;o</li>
+          <li>Amplamente adotada pela ind&uacute;stria global de embalagens met&aacute;licas</li>
+        </ul>
+        <h3>Dimens&otilde;es Avaliadas</h3>
+        <ul>
+          <li>W &mdash; Comprimento (largura) da recrava&ccedil;&atilde;o</li>
+          <li>T &mdash; Espessura (thickness) da recrava&ccedil;&atilde;o</li>
+          <li>BH &mdash; Gancho do corpo (body hook)</li>
+          <li>CH &mdash; Gancho da tampa (cover hook)</li>
+          <li>OL &mdash; Sobreposi&ccedil;&atilde;o absoluta; %OL m&iacute;nimo 45&ndash;50%</li>
+          <li>CS &mdash; Countersink (folga / afundamento da tampa)</li>
+        </ul>
+        <div class="norma-note">
+          &#x1F4D0; Base para especifica&ccedil;&otilde;es mundiais &mdash; adotada como refer&ecirc;ncia por Crown, Ball, Stolle e demais fabricantes.
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: FSSC 22000 / BRC -->
+    <div class="norma-card">
+      <div class="norma-header norma-food">
+        <span class="norma-badge">Internacional | Certifica&ccedil;&atilde;o</span>
+        <h2>FSSC 22000 e BRC Food</h2>
+        <p>Normas de Seguran&ccedil;a Alimentar</p>
+      </div>
+      <div class="norma-body">
+        <h3>O que &eacute;</h3>
+        <ul>
+          <li>Normas exigidas por grandes redes varejistas europeias e americanas</li>
+          <li>FSSC 22000 baseada na ISO 22000 + PRP espec&iacute;ficos do setor</li>
+          <li>BRC (British Retail Consortium) &mdash; padr&atilde;o global de alimentos</li>
+        </ul>
+        <h3>Requisitos para Recrava&ccedil;&atilde;o</h3>
+        <ul>
+          <li>Procedimento documentado de inspe&ccedil;&atilde;o de recrava&ccedil;&atilde;o</li>
+          <li>Frequ&ecirc;ncia baseada em an&aacute;lise de risco (m&iacute;n. 1x por turno)</li>
+          <li>Registros rastreg&aacute;veis por lote de produ&ccedil;&atilde;o</li>
+          <li>Treinamento documentado de todos os operadores</li>
+          <li>Manuten&ccedil;&atilde;o preventiva documentada da recravadeira</li>
+          <li>Valida&ccedil;&atilde;o e re-valida&ccedil;&atilde;o peri&oacute;dica do processo</li>
+        </ul>
+        <div class="norma-note">
+          &#x1F534; <strong>Aten&ccedil;&atilde;o:</strong> A recrava&ccedil;&atilde;o &eacute; tipicamente um <strong>PCC (Ponto Cr&iacute;tico de Controle)</strong> no HACCP &mdash; requer monitoramento e registros rigorosos.
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: ABNT / Brasil -->
+    <div class="norma-card">
+      <div class="norma-header norma-abnt">
+        <span class="norma-badge">Brasil | Nacional</span>
+        <h2>Normas Brasileiras (ABNT / ANVISA)</h2>
+        <p>Regulamenta&ccedil;&atilde;o nacional para alimentos enlatados</p>
+      </div>
+      <div class="norma-body">
+        <h3>Legisla&ccedil;&atilde;o Aplic&aacute;vel</h3>
+        <ul>
+          <li>RDC ANVISA 259/2002 &mdash; Rotulagem de alimentos embalados</li>
+          <li>Portaria SVS/MS 1.004/1998 &mdash; Atribui&ccedil;&atilde;o de fun&ccedil;&atilde;o de aditivos e seus limites de uso</li>
+          <li>ABNT NBR &mdash; Normas para embalagens met&aacute;licas (s&eacute;rie espec&iacute;fica por produto)</li>
+        </ul>
+        <h3>MAPA &mdash; Minist&eacute;rio da Agricultura</h3>
+        <ul>
+          <li>IN 62/2003 &mdash; M&eacute;todos anal&iacute;ticos para produtos de origem animal</li>
+          <li>Requisitos de exporta&ccedil;&atilde;o para mercados regulamentados</li>
+          <li>Registros obrigat&oacute;rios para estabelecimentos SIF/SIE</li>
+        </ul>
+        <div class="norma-note">
+          &#x1F30E; Para exporta&ccedil;&atilde;o ao <strong>MERCOSUL</strong>, consulte as normas espec&iacute;ficas de cada pa&iacute;s membro (Argentina, Uruguai, Paraguai).
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5: Indústria de Latas -->
+    <div class="norma-card">
+      <div class="norma-header norma-ind">
+        <span class="norma-badge">Internacional | Ind&uacute;stria</span>
+        <h2>Especifica&ccedil;&otilde;es da Ind&uacute;stria</h2>
+        <p>Guias t&eacute;cnicos dos fabricantes de latas e associa&ccedil;&otilde;es</p>
+      </div>
+      <div class="norma-body">
+        <h3>SEFEL &mdash; Europa</h3>
+        <ul>
+          <li>European Seam Quality Control &mdash; guia t&eacute;cnico europeu de refer&ecirc;ncia</li>
+          <li>Especifica&ccedil;&otilde;es por di&acirc;metro para latas de bebida (DRD, DWI)</li>
+          <li>Frequ&ecirc;ncia recomendada: a cada 30 min para linhas de alta velocidade</li>
+        </ul>
+        <h3>Fabricantes de Latas</h3>
+        <ul>
+          <li>Crown, Stolle e Ball publicam especifica&ccedil;&otilde;es t&eacute;cnicas pr&oacute;prias</li>
+          <li>Par&acirc;metros variam por di&acirc;metro, espessura de chapa e tipo de produto</li>
+          <li>Consulte sempre o manual da tampa e o data sheet do fabricante</li>
+        </ul>
+        <div class="norma-note">
+          &#x1F4CC; <strong>Importante:</strong> Sempre consulte a especifica&ccedil;&atilde;o da tampa que voc&ecirc; utiliza &mdash; os valores de W, T, BH, CH e CS s&atilde;o definidos pelo fabricante da tampa.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /normas-grid -->
+
+  <!-- Tabela Comparativa -->
+  <h2 style="font-size:1.4rem;font-weight:800;color:#0A192F;margin:2.5rem 0 .5rem">Comparativo de Requisitos por Mercado</h2>
+  <p style="color:#64748b;font-size:.9rem;margin-bottom:.5rem">
+    Resumo dos principais requisitos regulat&oacute;rios aplic&aacute;veis por mercado de destino.
+  </p>
+
+  <table class="req-table">
+    <thead>
+      <tr>
+        <th>Requisito</th>
+        <th>Brasil</th>
+        <th>EUA (FDA)</th>
+        <th>Europa (BRC/FSSC)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frequ&ecirc;ncia de inspe&ccedil;&atilde;o</strong></td>
+        <td><span class="badge-na">N&atilde;o regulamentada federalmente</span></td>
+        <td><span class="badge-obrig">M&iacute;n. a cada 4h (&sect;113.60)</span></td>
+        <td><span class="badge-recom">Baseada em risco (&gt;1x/turno recomendado)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Registros obrigat&oacute;rios</strong></td>
+        <td><span class="badge-recom">MAPA/ANVISA (por produto)</span></td>
+        <td><span class="badge-obrig">Sim &mdash; 3 anos</span></td>
+        <td><span class="badge-obrig">Sim &mdash; m&iacute;n. 2 anos</span></td>
+      </tr>
+      <tr>
+        <td><strong>Treinamento de operadores</strong></td>
+        <td><span class="badge-recom">Recomendado</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio (certificado)</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio (documentado)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Calibra&ccedil;&atilde;o da recravadeira</strong></td>
+        <td><span class="badge-recom">Boa pr&aacute;tica</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio (documentado)</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio (documentado)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Avalia&ccedil;&atilde;o teardown</strong></td>
+        <td><span class="badge-recom">Boa pr&aacute;tica</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio</span></td>
+      </tr>
+      <tr>
+        <td><strong>Rastreabilidade por lote</strong></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio (ANVISA)</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio</span></td>
+        <td><span class="badge-obrig">Obrigat&oacute;rio</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA -->
+  <div class="cta-normas">
+    <div>
+      <p style="font-weight:700;font-size:1rem;margin:0 0 .35rem">Precisa implementar um programa de inspe&ccedil;&atilde;o conforme normas?</p>
+      <p style="font-size:.875rem;color:rgba(255,255,255,.8);margin:0">A QMC Brasil oferece equipamentos, treinamento e suporte t&eacute;cnico para adequa&ccedil;&atilde;o &agrave;s normas FDA, FSSC 22000 e BRC.</p>
+    </div>
+    <a href="https://www.qmcbrasil.com.br/produtos" target="_blank" rel="noopener">Ver Equipamentos QMC Brasil &rarr;</a>
+  </div>
+
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><div class="logo-row"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></div><p>Portal t&eacute;cnico sobre recrava&ccedil;&atilde;o dupla de latas met&aacute;licas em portugu&ecirc;s. Conte&uacute;do produzido pela equipe QMC Brasil.</p></div><div class="footer-col"><h4>Categorias</h4><ul><li><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a></li><li><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a></li><li><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a></li><li><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a></li><li><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a></li></ul></div><div class="footer-col"><h4>Ferramentas</h4><ul><li><a href="/conhecimento/glossario.html">Gloss&aacute;rio T&eacute;cnico</a></li><li><a href="/conhecimento/calculadora-recravacao/index.html">Calculadora</a></li><li><a href="/conhecimento/diagnostico/index.html">Diagn&oacute;stico de Defeitos</a></li><li><a href="/conhecimento/checklist/index.html">Checklists de Inspe&ccedil;&atilde;o</a></li><li><a href="/conhecimento/especificacoes/index.html">Tabelas de Especifica&ccedil;&atilde;o</a></li><li><a href="/conhecimento/faq/index.html">Perguntas Frequentes</a></li><li><a href="/conhecimento/normas/index.html">Normas e Regulamentos</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 QMC Brasil - Todos os direitos reservados.</span></div></footer>
+
+<a href="https://wa.me/5519331221497?text=Ol%C3%A1!%20Vi%20o%20portal%20t%C3%A9cnico%20da%20QMC%20Brasil%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" id="whatsapp-float" aria-label="Falar no WhatsApp" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.25);text-decoration:none;transition:transform 0.2s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script src="/conhecimento/assets/js/main.js"></script>
+</body>
+</html>

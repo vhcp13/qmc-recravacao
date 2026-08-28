@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklists de Inspeção de Recravação | QMC Brasil</title>
+  <meta name="description" content="Checklists de inspeção de recravação dupla para setup de recravadeira, inspeção visual e registro de medições diárias. Baixe e use gratuitamente.">
+  <link rel="stylesheet" href="/conhecimento/assets/css/style.css">
+  <style>
+    .checklist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0}
+    .checklist-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .cl-header{background:linear-gradient(135deg,#0A192F,#004C97);padding:1.25rem 1.5rem}
+    .cl-header h2{color:#fff;font-size:1.05rem;margin:0}
+    .cl-header p{color:rgba(255,255,255,.7);font-size:.78rem;margin:.25rem 0 0}
+    .cl-body{padding:1.25rem 1.5rem}
+    .cl-section{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#004C97;padding:.5rem 0 .25rem;margin-top:.75rem}
+    .cl-section:first-child{margin-top:0}
+    .cl-item{display:flex;align-items:flex-start;gap:.75rem;padding:.5rem 0;border-bottom:1px solid #f1f5f9}
+    .cl-item:last-child{border-bottom:none}
+    .cl-check{width:17px;height:17px;border:2px solid #004C97;border-radius:3px;flex-shrink:0;margin-top:2px}
+    .cl-text{font-size:.85rem;color:#374151;line-height:1.45}
+    .cl-text strong{color:#0f172a;display:block;font-size:.875rem}
+    .cl-text span{color:#64748b;font-size:.78rem}
+    .print-btn{display:inline-flex;align-items:center;gap:.4rem;background:#004C97;color:#fff;border:none;border-radius:6px;padding:.55rem 1.1rem;font-size:.82rem;font-weight:600;cursor:pointer;margin:1rem 1.5rem;font-family:inherit;transition:background .2s}
+    .print-btn:hover{background:#003a75}
+    .reg-table{width:100%;border-collapse:collapse;font-size:.78rem;margin-top:.5rem}
+    .reg-table th{background:#004C97;color:#fff;padding:.4rem .6rem;text-align:center;font-weight:600}
+    .reg-table td{padding:.4rem .6rem;border:1px solid #e2e8f0;text-align:center;color:#374151}
+    .reg-table td:first-child{text-align:left;font-weight:600;color:#0f172a}
+    .reg-table tr:nth-child(even) td{background:#f8fafc}
+    .field-row{display:flex;gap:1rem;margin-top:.75rem;flex-wrap:wrap}
+    .field-box{flex:1;min-width:120px}
+    .field-box label{display:block;font-size:.7rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.25rem}
+    .field-box .field-line{border-bottom:1.5px solid #cbd5e1;height:1.75rem}
+    @media print{.site-header,.site-footer,#whatsapp-float,.print-btn,#search-overlay,.article-breadcrumb{display:none!important}.checklist-grid{display:block}.checklist-card{break-inside:avoid;margin-bottom:2rem;box-shadow:none;border:1px solid #ccc}.cl-check{border:2px solid #000}.print-credit{display:block!important}}
+    .print-credit{display:none;font-size:.7rem;color:#64748b;text-align:center;margin-top:1rem}
+  </style>
+</head>
+<body>
+
+<header class="site-header"><div class="header-inner"><a href="/conhecimento/" class="site-logo"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></a><nav class="site-nav"><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a><div class="nav-dropdown"><span>Ferramentas &#9660;</span><div class="nav-dropdown-menu"><a href="/conhecimento/calculadora-recravacao/index.html"><span class="dd-icon">&#129518;</span>Calculadora</a><a href="/conhecimento/glossario.html"><span class="dd-icon">&#128214;</span>Gloss&aacute;rio EN-PT</a><a href="/conhecimento/diagnostico/index.html"><span class="dd-icon">&#128269;</span>Diagn&oacute;stico de Defeitos</a><a href="/conhecimento/checklist/index.html"><span class="dd-icon">&#9989;</span>Checklists de Inspe&ccedil;&atilde;o</a><a href="/conhecimento/especificacoes/index.html"><span class="dd-icon">&#128207;</span>Tabelas de Especifica&ccedil;&atilde;o</a><a href="/conhecimento/faq/index.html"><span class="dd-icon">&#10067;</span>Perguntas Frequentes</a><a href="/conhecimento/normas/index.html"><span class="dd-icon">&#128203;</span>Normas e Regulamentos</a></div></div></nav><div class="header-search"><span class="search-icon">&#128269;</span><input type="text" placeholder="Buscar..." class="search-input"></div><button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+<div id="search-overlay"></div>
+
+<main class="main-content" style="max-width:1200px;margin:0 auto;padding:2rem 1.5rem">
+
+  <h1 style="font-size:2rem;font-weight:800;color:#0A192F;margin-bottom:.5rem">&#x2705; Checklists de Inspe&ccedil;&atilde;o de Recrava&ccedil;&atilde;o</h1>
+  <p style="color:#64748b;font-size:1rem;max-width:720px;margin-bottom:1.5rem">
+    Utilize estes checklists padronizados para garantir a conformidade do processo de recrava&ccedil;&atilde;o dupla.
+    Imprima, preencha e arquive como evid&ecirc;ncia de qualidade. Adequados para auditorias FSSC 22000, BRC e requisitos FDA.
+  </p>
+
+  <div class="checklist-grid">
+
+    <!-- CARD 1: Setup da Recravadeira -->
+    <div class="checklist-card">
+      <div class="cl-header">
+        <h2>&#x1F4CB; Setup da Recravadeira</h2>
+        <p>Verifica&ccedil;&atilde;o antes de iniciar e a cada troca de produto</p>
+      </div>
+      <button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Imprimir Checklist</button>
+      <div class="cl-body">
+
+        <div class="cl-section">Antes de Iniciar</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Press&atilde;o de ar</strong><span>Verificar press&atilde;o na linha conforme especifica&ccedil;&atilde;o da m&aacute;quina</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Chuck (cabe&ccedil;ote de recrava&ccedil;&atilde;o)</strong><span>Inspecionar desgaste, trincas e fixa&ccedil;&atilde;o correta</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Rolos de recrava&ccedil;&atilde;o</strong><span>Verificar desgaste e perfil dos rolos 1&ordf; e 2&ordf; opera&ccedil;&atilde;o</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Altura do pino central</strong><span>Confirmar altura conforme tabela de setup do produto</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Lifter (plataforma elevadora)</strong><span>Verificar curso e condi&ccedil;&atilde;o do lifter</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Alinhamento lata/chuck</strong><span>Confirmar centraliza&ccedil;&atilde;o da lata sob o chuck</span></div>
+        </div>
+
+        <div class="cl-section">1&ordf; Opera&ccedil;&atilde;o &mdash; Verificar</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Comprimento da recrava&ccedil;&atilde;o (W)</strong><span>Medir com micro&ocirc;metro &mdash; dentro da toler&acirc;ncia</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Espessura na sa&iacute;da da 1&ordf; op.</strong><span>Verificar forma&ccedil;&atilde;o inicial do gancho</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Gancho do corpo (BH)</strong><span>Confirmar forma&ccedil;&atilde;o adequada pelo teardown</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Gancho da tampa (CH)</strong><span>Verificar comprimento m&iacute;nimo do gancho</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Inspe&ccedil;&atilde;o visual externa</strong><span>Aus&ecirc;ncia de espora, vees e flange amassado</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Ajuste do rolo 1&ordf; op.</strong><span>Registrar posi&ccedil;&atilde;o do rolo para refer&ecirc;ncia futura</span></div>
+        </div>
+
+        <div class="cl-section">2&ordf; Opera&ccedil;&atilde;o &mdash; Verificar</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Espessura final (T)</strong><span>Medir com micro&ocirc;metro &mdash; dentro da especifica&ccedil;&atilde;o</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Sobreposi&ccedil;&atilde;o no teardown (OL%)</strong><span>M&iacute;nimo 45&ndash;50% conforme norma APHA</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Comprimento final da recrava&ccedil;&atilde;o</strong><span>Confirmar dentro da toler&acirc;ncia da especifica&ccedil;&atilde;o</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Folga (CS &mdash; Countersink)</strong><span>Medir profundidade do countersink</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Inspe&ccedil;&atilde;o visual externa completa</strong><span>Verificar 360&deg; &mdash; aus&ecirc;ncia de defeitos vis&iacute;veis</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Afundamento da tampa</strong><span>Confirmar conformidade do afundamento/bombagem</span></div>
+        </div>
+
+        <div class="cl-section">Aprovação e Liberação</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Todas as medi&ccedil;&otilde;es dentro do especificado</strong><span>W, T, BH, CH, OL%, CS aprovados</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Registro de setup preenchido</strong><span>Formul&aacute;rio com data, produto, turno e operador</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Aprovado por (supervisor/inspetor)</strong><span>Rubrica e carimbo quando aplic&aacute;vel</span></div>
+        </div>
+
+      </div>
+      <div class="print-credit">Portal QMC Brasil &mdash; qmcbrasil.com.br | Checklist de Setup da Recravadeira</div>
+    </div>
+
+    <!-- CARD 2: Inspeção Visual -->
+    <div class="checklist-card">
+      <div class="cl-header">
+        <h2>&#x1F50D; Inspe&ccedil;&atilde;o Visual</h2>
+        <p>Avalia&ccedil;&atilde;o externa e por corte transversal (teardown)</p>
+      </div>
+      <button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Imprimir Checklist</button>
+      <div class="cl-body">
+
+        <div class="cl-section">Inspe&ccedil;&atilde;o Visual Externa</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Aus&ecirc;ncia de recrava&ccedil;&atilde;o falsa</strong><span>Nenhuma tampa com recrava&ccedil;&atilde;o incompleta ou saltada</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Aus&ecirc;ncia de espora (spur)</strong><span>Sem proje&ccedil;&atilde;o aguda no flange da tampa</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Aus&ecirc;ncia de vees (droop)</strong><span>Sem gotejamento ou escorregamento do gancho</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Flange n&atilde;o amassado</strong><span>Sem deforma&ccedil;&atilde;o mec&acirc;nica no flange do corpo</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Uniformidade da recrava&ccedil;&atilde;o</strong><span>Apar&ecirc;ncia homog&ecirc;nea em todo o per&iacute;metro</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Tampa sem amassados ou trincas</strong><span>Integridade da tampa na &aacute;rea de recrava&ccedil;&atilde;o</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Corpo da lata sem deforma&ccedil;&otilde;es</strong><span>Aus&ecirc;ncia de amassados pr&oacute;ximos &agrave; &aacute;rea de costura</span></div>
+        </div>
+
+        <div class="cl-section">Corte Transversal (Teardown)</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Medi&ccedil;&atilde;o em 3 posi&ccedil;&otilde;es (0&deg;, 120&deg;, 240&deg;)</strong><span>Ou conforme exig&ecirc;ncia do plano de controle</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Gancho do corpo (BH)</strong><span>Dentro do valor m&iacute;nimo especificado</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Gancho da tampa (CH)</strong><span>Dentro do valor m&iacute;nimo especificado</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Ruga do gancho corpo</strong><span>Percentual dentro do limite m&aacute;ximo</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Aus&ecirc;ncia de recrava&ccedil;&atilde;o falsa interna</strong><span>Verificar no corte &mdash; sem canal aberto</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Compound vis&iacute;vel e distribu&iacute;do</strong><span>Compound presente ao longo de todo o gancho</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Sobreposi&ccedil;&atilde;o (OL%) &ge; 45%</strong><span>Calcular: (BH + CH + T &minus; W) / (W &minus; T) &times; 100</span></div>
+        </div>
+
+        <div class="cl-section">Aprova&ccedil;&atilde;o</div>
+
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Quantidade inspecionada</strong><span>Registrar n&ordm; de latas verificadas no per&iacute;odo</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>N&atilde;o conformidades encontradas</strong><span>Registrar e encaminhar para an&aacute;lise (0 = aprovado)</span></div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Rubrica do inspetor respons&aacute;vel</strong><span>Nome, data e hor&aacute;rio da inspe&ccedil;&atilde;o</span></div>
+        </div>
+
+      </div>
+      <div class="print-credit">Portal QMC Brasil &mdash; qmcbrasil.com.br | Checklist de Inspe&ccedil;&atilde;o Visual</div>
+    </div>
+
+    <!-- CARD 3: Registro de Medições Diárias -->
+    <div class="checklist-card">
+      <div class="cl-header">
+        <h2>&#x1F4CA; Registro de Medi&ccedil;&otilde;es Di&aacute;rias</h2>
+        <p>Planilha de controle dimensional por turno</p>
+      </div>
+      <button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Imprimir Planilha</button>
+      <div class="cl-body">
+
+        <div class="field-row">
+          <div class="field-box">
+            <label>Linha / M&aacute;quina</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-box">
+            <label>Data</label>
+            <div class="field-line"></div>
+          </div>
+        </div>
+        <div class="field-row" style="margin-top:.5rem">
+          <div class="field-box">
+            <label>Produto / Refer&ecirc;ncia</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-box">
+            <label>Turno</label>
+            <div class="field-line"></div>
+          </div>
+        </div>
+
+        <table class="reg-table">
+          <thead>
+            <tr>
+              <th style="text-align:left">Dimens&atilde;o</th>
+              <th>Espec. M&iacute;n.</th>
+              <th>Espec. M&aacute;x.</th>
+              <th>Leitura 1</th>
+              <th>Leitura 2</th>
+              <th>Leitura 3</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>W &mdash; Comprimento</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>T &mdash; Espessura</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>BH &mdash; Gancho Corpo</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>CH &mdash; Gancho Tampa</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>OL% &mdash; Sobreposi&ccedil;&atilde;o</td>
+              <td>45%</td><td>&mdash;</td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>Folga (CS)</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+              <td>CS &mdash; Countersink</td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="field-row" style="margin-top:1.25rem">
+          <div class="field-box">
+            <label>Operador / Inspetor</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-box">
+            <label>Supervis&atilde;o</label>
+            <div class="field-line"></div>
+          </div>
+          <div class="field-box">
+            <label>Qualidade</label>
+            <div class="field-line"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;padding:.6rem .875rem;background:#f8fafc;border-left:3px solid #004C97;border-radius:0 6px 6px 0;font-size:.78rem;color:#374151">
+          <strong>Instru&ccedil;&otilde;es:</strong> Preencha 3 leituras por dimens&atilde;o a cada inspe&ccedil;&atilde;o. Registre &#x2713; (OK) ou &#x2717; (NOK) na coluna Status.
+          Em caso de NOK, acione o supervisor e registre a&ccedil;&atilde;o corretiva no verso.
+        </div>
+
+      </div>
+      <div class="print-credit">Portal QMC Brasil &mdash; qmcbrasil.com.br | Registro de Medi&ccedil;&otilde;es Di&aacute;rias</div>
+    </div>
+
+  </div><!-- /checklist-grid -->
+
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div class="footer-brand"><div class="logo-row"><img src="/conhecimento/assets/images/logo.svg" alt="QMC Brasil"></div><p>Portal t&eacute;cnico sobre recrava&ccedil;&atilde;o dupla de latas met&aacute;licas em portugu&ecirc;s. Conte&uacute;do produzido pela equipe QMC Brasil.</p></div><div class="footer-col"><h4>Categorias</h4><ul><li><a href="/conhecimento/categoria/visao-geral/index.html">Vis&atilde;o Geral</a></li><li><a href="/conhecimento/categoria/medicoes/index.html">Medi&ccedil;&otilde;es</a></li><li><a href="/conhecimento/categoria/defeitos/index.html">Defeitos</a></li><li><a href="/conhecimento/categoria/terminologia/index.html">Terminologia</a></li><li><a href="/conhecimento/categoria/como-fazer/index.html">Como Fazer?</a></li></ul></div><div class="footer-col"><h4>Ferramentas</h4><ul><li><a href="/conhecimento/glossario.html">Gloss&aacute;rio T&eacute;cnico</a></li><li><a href="/conhecimento/calculadora-recravacao/index.html">Calculadora</a></li><li><a href="/conhecimento/diagnostico/index.html">Diagn&oacute;stico de Defeitos</a></li><li><a href="/conhecimento/checklist/index.html">Checklists de Inspe&ccedil;&atilde;o</a></li><li><a href="/conhecimento/especificacoes/index.html">Tabelas de Especifica&ccedil;&atilde;o</a></li><li><a href="/conhecimento/faq/index.html">Perguntas Frequentes</a></li><li><a href="/conhecimento/normas/index.html">Normas e Regulamentos</a></li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 QMC Brasil - Todos os direitos reservados.</span></div></footer>
+
+<a href="https://wa.me/5519331221497?text=Ol%C3%A1!%20Vi%20o%20portal%20t%C3%A9cnico%20da%20QMC%20Brasil%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" id="whatsapp-float" aria-label="Falar no WhatsApp" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.25);text-decoration:none;transition:transform 0.2s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script src="/conhecimento/assets/js/main.js"></script>
+</body>
+</html>
