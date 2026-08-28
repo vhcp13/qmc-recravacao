@@ -35,6 +35,17 @@
     .badge-na{background:#f1f5f9;color:#64748b;border-radius:4px;padding:.1rem .45rem;font-size:.68rem;font-weight:700}
     .cta-normas{background:linear-gradient(135deg,#0A192F,#004C97);border-radius:12px;padding:1.5rem;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:2rem}
     .cta-normas a{background:#eab308;color:#0A192F;padding:.6rem 1.25rem;border-radius:8px;font-weight:700;font-size:.875rem;text-decoration:none;white-space:nowrap}
+    .disclaimer-box{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:.85rem;color:#78350f;line-height:1.6}
+    .norma-fonte{margin-top:.75rem;padding-top:.6rem;border-top:1px solid #e2e8f0;font-size:.73rem;color:#64748b}
+    .norma-fonte a{color:#004C97;text-decoration:underline}
+    .ref-section{margin-top:2.5rem;padding:1.5rem;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0}
+    .ref-section h2{font-size:1.1rem;font-weight:700;color:#0A192F;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #004C97}
+    .ref-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+    .ref-list li{font-size:.83rem;color:#374151;padding:.5rem .75rem;background:#fff;border-radius:6px;border:1px solid #e2e8f0;line-height:1.65}
+    .ref-list li::before{display:none}
+    .ref-num{display:inline-block;background:#004C97;color:#fff;border-radius:4px;padding:.05rem .4rem;font-size:.7rem;font-weight:700;margin-right:.4rem}
+    .ref-list a{color:#004C97;text-decoration:underline;word-break:break-all}
+    sup.cite{font-size:.65rem;background:#004C97;color:#fff;border-radius:3px;padding:.05rem .3rem;font-weight:700;vertical-align:super;margin-left:.15rem}
   </style>
 </head>
 <body>
@@ -50,6 +61,11 @@
     Conhe&ccedil;a as principais normas que estabelecem requisitos de inspe&ccedil;&atilde;o, frequ&ecirc;ncia, registros e treinamento para opera&ccedil;&otilde;es com latas met&aacute;licas.
   </p>
 
+  <div class="disclaimer-box">
+    <strong>&#9888;&#65039; Aviso editorial:</strong> Este conte&uacute;do &eacute; um <strong>resumo educativo</strong> elaborado pela QMC Brasil com base nas normas oficiais vigentes &agrave; data de publica&ccedil;&atilde;o.
+    Regulamentos podem ser atualizados. Sempre consulte os textos oficiais e completos das normas antes de tomar decis&otilde;es regulat&oacute;rias. Os links para os documentos originais est&atilde;o na se&ccedil;&atilde;o <a href="#referencias" style="color:#92400e;font-weight:600">Refer&ecirc;ncias</a> ao final desta p&aacute;gina.
+  </div>
+
   <div class="normas-grid">
 
     <!-- CARD 1: FDA 21 CFR 113 -->
@@ -62,20 +78,23 @@
       <div class="norma-body">
         <h3>O que &eacute;</h3>
         <ul>
-          <li>Regulamento federal americano para alimentos processados termicamente com pH &gt; 4,6</li>
+          <li>Regulamento federal americano para alimentos processados termicamente com pH &gt; 4,6<sup class="cite" title="21 CFR §113.3">1</sup></li>
           <li>Estabelece requisitos m&iacute;nimos para o fechamento herm&eacute;tico de latas met&aacute;licas</li>
           <li>Administrado pela FDA (Food and Drug Administration)</li>
         </ul>
         <h3>Requisitos de Recrava&ccedil;&atilde;o</h3>
         <ul>
-          <li>Inspe&ccedil;&atilde;o visual e dimensional a cada 4 horas (&sect;113.60)</li>
-          <li>Registros de inspe&ccedil;&atilde;o mantidos por m&iacute;nimo 3 anos</li>
-          <li>Operadores devem ser certificados em curso aprovado</li>
+          <li>Inspe&ccedil;&atilde;o visual e dimensional a cada 4 horas<sup class="cite" title="21 CFR §113.60(a)">1</sup> (&sect;113.60)</li>
+          <li>Registros de inspe&ccedil;&atilde;o mantidos por m&iacute;nimo 3 anos<sup class="cite" title="21 CFR §113.100">1</sup></li>
+          <li>Operadores devem ser t&eacute;cnicos qualificados em fechamento de cont&ecirc;ineres<sup class="cite" title="21 CFR §113.10">1</sup></li>
           <li>Calibra&ccedil;&atilde;o de equipamentos documentada</li>
           <li>Desvios de processo documentados e analisados</li>
         </ul>
         <div class="norma-note">
-          &#x26A0;&#xFE0F; <strong>Obrigat&oacute;rio</strong> para exportar produtos enlatados para os Estados Unidos.
+          &#9888;&#65039; <strong>Obrigat&oacute;rio</strong> para exportar produtos enlatados para os Estados Unidos.
+        </div>
+        <div class="norma-fonte">
+          &#128196; <strong>Fonte oficial:</strong> <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-113" target="_blank" rel="noopener">eCFR — 21 CFR Part 113 (ecfr.gov)</a>
         </div>
       </div>
     </div>
@@ -91,7 +110,7 @@
         <h3>O que &eacute;</h3>
         <ul>
           <li>Metodologia internacional para inspe&ccedil;&atilde;o visual e dimensional de recrava&ccedil;&otilde;es</li>
-          <li>Define nomenclatura, procedimentos de teardown e crit&eacute;rios de aceita&ccedil;&atilde;o</li>
+          <li>Define nomenclatura, procedimentos de teardown e crit&eacute;rios de aceita&ccedil;&atilde;o<sup class="cite" title="APHA Compendium, Cap. 62">2</sup></li>
           <li>Amplamente adotada pela ind&uacute;stria global de embalagens met&aacute;licas</li>
         </ul>
         <h3>Dimens&otilde;es Avaliadas</h3>
@@ -100,11 +119,16 @@
           <li>T &mdash; Espessura (thickness) da recrava&ccedil;&atilde;o</li>
           <li>BH &mdash; Gancho do corpo (body hook)</li>
           <li>CH &mdash; Gancho da tampa (cover hook)</li>
-          <li>OL &mdash; Sobreposi&ccedil;&atilde;o absoluta; %OL m&iacute;nimo 45&ndash;50%</li>
-          <li>CS &mdash; Countersink (folga / afundamento da tampa)</li>
+          <li>OL &mdash; Sobreposi&ccedil;&atilde;o absoluta; %OL m&iacute;nimo 45&ndash;50%<sup class="cite" title="NFPA Bulletin 26-L; APHA guidelines">2,3</sup></li>
+          <li>CS &mdash; Countersink (afundamento da tampa)</li>
         </ul>
         <div class="norma-note">
-          &#x1F4D0; Base para especifica&ccedil;&otilde;es mundiais &mdash; adotada como refer&ecirc;ncia por Crown, Ball, Stolle e demais fabricantes.
+          &#128208; Base para especifica&ccedil;&otilde;es mundiais &mdash; adotada como refer&ecirc;ncia por Crown, Ball, Stolle e demais fabricantes.
+        </div>
+        <div class="norma-fonte">
+          &#128196; <strong>Fontes:</strong> <a href="https://www.apha.org" target="_blank" rel="noopener">APHA (apha.org)</a> &mdash;
+          NFPA Bulletin 26-L <em>Canned Foods: Principles of Thermal Process Control</em>, 8&ordf; ed. &mdash;
+          <a href="https://www.ncfst.iit.edu" target="_blank" rel="noopener">National Center for Food Safety and Technology</a>
         </div>
       </div>
     </div>
@@ -133,7 +157,13 @@
           <li>Valida&ccedil;&atilde;o e re-valida&ccedil;&atilde;o peri&oacute;dica do processo</li>
         </ul>
         <div class="norma-note">
-          &#x1F534; <strong>Aten&ccedil;&atilde;o:</strong> A recrava&ccedil;&atilde;o &eacute; tipicamente um <strong>PCC (Ponto Cr&iacute;tico de Controle)</strong> no HACCP &mdash; requer monitoramento e registros rigorosos.
+          &#x1F534; <strong>Aten&ccedil;&atilde;o:</strong> A recrava&ccedil;&atilde;o &eacute; tipicamente um <strong>PCC (Ponto Cr&iacute;tico de Controle)</strong> no HACCP &mdash; requer monitoramento e registros rigorosos.<sup class="cite" title="ISO 22000:2018, cláusula 8.5.4">4</sup>
+        </div>
+        <div class="norma-fonte">
+          &#128196; <strong>Fontes oficiais:</strong>
+          <a href="https://www.fssc22000.com/scheme/scheme-documents/" target="_blank" rel="noopener">FSSC 22000 Scheme Documents</a> &mdash;
+          <a href="https://www.brcgs.com/standards/food-safety/" target="_blank" rel="noopener">BRCGS Food Safety Standard</a> &mdash;
+          <a href="https://www.iso.org/standard/65464.html" target="_blank" rel="noopener">ISO 22000:2018 (iso.org)</a>
         </div>
       </div>
     </div>
@@ -148,18 +178,24 @@
       <div class="norma-body">
         <h3>Legisla&ccedil;&atilde;o Aplic&aacute;vel</h3>
         <ul>
-          <li>RDC ANVISA 259/2002 &mdash; Rotulagem de alimentos embalados</li>
-          <li>Portaria SVS/MS 1.004/1998 &mdash; Atribui&ccedil;&atilde;o de fun&ccedil;&atilde;o de aditivos e seus limites de uso</li>
+          <li>RDC ANVISA 259/2002<sup class="cite" title="Diário Oficial da União, 23/09/2002">5</sup> &mdash; Regulamento T&eacute;cnico sobre Rotulagem de Alimentos Embalados</li>
+          <li>Decreto n&ordm; 9.013/2017 (RIISPOA)<sup class="cite" title="Regulamento de Inspeção Industrial e Sanitária de Produtos de Origem Animal">6</sup> &mdash; Requisitos de fechamento herm&eacute;tico para produtos de origem animal</li>
           <li>ABNT NBR &mdash; Normas para embalagens met&aacute;licas (s&eacute;rie espec&iacute;fica por produto)</li>
         </ul>
         <h3>MAPA &mdash; Minist&eacute;rio da Agricultura</h3>
         <ul>
-          <li>IN 62/2003 &mdash; M&eacute;todos anal&iacute;ticos para produtos de origem animal</li>
+          <li>IN 49/2006 MAPA &mdash; Regulamento de Inspe&ccedil;&atilde;o para produtos vegetais processados termicamente</li>
           <li>Requisitos de exporta&ccedil;&atilde;o para mercados regulamentados</li>
           <li>Registros obrigat&oacute;rios para estabelecimentos SIF/SIE</li>
         </ul>
         <div class="norma-note">
           &#x1F30E; Para exporta&ccedil;&atilde;o ao <strong>MERCOSUL</strong>, consulte as normas espec&iacute;ficas de cada pa&iacute;s membro (Argentina, Uruguai, Paraguai).
+        </div>
+        <div class="norma-fonte">
+          &#128196; <strong>Fontes oficiais:</strong>
+          <a href="https://www.gov.br/anvisa/pt-br/assuntos/legislacao" target="_blank" rel="noopener">ANVISA Legisla&ccedil;&atilde;o</a> &mdash;
+          <a href="https://www.gov.br/agricultura/pt-br/assuntos/legislacao" target="_blank" rel="noopener">MAPA Legisla&ccedil;&atilde;o</a> &mdash;
+          <a href="https://www.abnt.org.br" target="_blank" rel="noopener">ABNT (abnt.org.br)</a>
         </div>
       </div>
     </div>
@@ -185,7 +221,12 @@
           <li>Consulte sempre o manual da tampa e o data sheet do fabricante</li>
         </ul>
         <div class="norma-note">
-          &#x1F4CC; <strong>Importante:</strong> Sempre consulte a especifica&ccedil;&atilde;o da tampa que voc&ecirc; utiliza &mdash; os valores de W, T, BH, CH e CS s&atilde;o definidos pelo fabricante da tampa.
+          &#128204; <strong>Importante:</strong> Sempre consulte a especifica&ccedil;&atilde;o da tampa que voc&ecirc; utiliza &mdash; os valores de W, T, BH, CH e CS s&atilde;o definidos pelo fabricante da tampa.
+        </div>
+        <div class="norma-fonte">
+          &#128196; <strong>Guias de refer&ecirc;ncia:</strong>
+          <a href="https://www.sefelcanmaking.com" target="_blank" rel="noopener">SEFEL Can Making (sefelcanmaking.com)</a> &mdash;
+          Manuais t&eacute;cnicos Crown, Ball e Stolle (dispon&iacute;veis mediante contato com os fabricantes)
         </div>
       </div>
     </div>
@@ -195,7 +236,7 @@
   <!-- Tabela Comparativa -->
   <h2 style="font-size:1.4rem;font-weight:800;color:#0A192F;margin:2.5rem 0 .5rem">Comparativo de Requisitos por Mercado</h2>
   <p style="color:#64748b;font-size:.9rem;margin-bottom:.5rem">
-    Resumo dos principais requisitos regulat&oacute;rios aplic&aacute;veis por mercado de destino.
+    Resumo dos principais requisitos regulat&oacute;rios aplic&aacute;veis por mercado de destino.<sup class="cite" title="Baseado em FDA 21 CFR 113, BRCGS Issue 9, FSSC 22000 v6">1,4,7</sup>
   </p>
 
   <table class="req-table">
@@ -246,6 +287,58 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- Referencias -->
+  <div class="ref-section" id="referencias">
+    <h2>&#128209; Refer&ecirc;ncias Bibliogr&aacute;ficas e Fontes</h2>
+    <ul class="ref-list">
+      <li>
+        <span class="ref-num">1</span>
+        <strong>FDA — Code of Federal Regulations, Title 21, Part 113</strong> — <em>Thermally Processed Low-Acid Foods Packaged in Hermetically Sealed Containers</em>. U.S. Food and Drug Administration, vigente.
+        <br>&#128279; <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-113" target="_blank" rel="noopener">ecfr.gov/current/title-21/chapter-I/subchapter-A/part-113</a>
+        <br><em style="font-size:.75rem;color:#64748b">Sec&ccedil;&otilde;es citadas: §113.3 (defini&ccedil;&otilde;es), §113.10 (pessoal), §113.60 (inspe&ccedil;&atilde;o de fechamento), §113.100 (registros)</em>
+      </li>
+      <li>
+        <span class="ref-num">2</span>
+        <strong>APHA — American Public Health Association</strong> — <em>Compendium of Methods for the Microbiological Examination of Foods</em>, Cap&iacute;tulo 62: Examination of Double Seams. 4&ordf; ed., Washington, D.C., 2001.
+        <br>&#128279; <a href="https://www.apha.org/publications" target="_blank" rel="noopener">apha.org/publications</a>
+      </li>
+      <li>
+        <span class="ref-num">3</span>
+        <strong>NFPA — National Food Processors Association</strong> — <em>Canned Foods: Principles of Thermal Process Control, Acidification and Container Closure Evaluation</em>, Bulletin 26-L, 8&ordf; ed. Washington, D.C., 2020.
+        <br><em style="font-size:.75rem;color:#64748b">Dispon&iacute;vel mediante aquisi&ccedil;&atilde;o junto &agrave; Food Processing Suppliers Association (FPSA)</em>
+      </li>
+      <li>
+        <span class="ref-num">4</span>
+        <strong>ISO 22000:2018</strong> — <em>Food safety management systems — Requirements for any organization in the food chain</em>. International Organization for Standardization (ISO), Gen&eacute;bra, 2018.
+        <br>&#128279; <a href="https://www.iso.org/standard/65464.html" target="_blank" rel="noopener">iso.org/standard/65464.html</a>
+      </li>
+      <li>
+        <span class="ref-num">5</span>
+        <strong>ANVISA — Resolu&ccedil;&atilde;o RDC n&ordm; 259, de 20 de setembro de 2002</strong> — <em>Regulamento T&eacute;cnico sobre Rotulagem de Alimentos Embalados</em>. Di&aacute;rio Oficial da Uni&atilde;o, Bras&iacute;lia, 23 set. 2002.
+        <br>&#128279; <a href="https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2002/res0259_20_09_2002.html" target="_blank" rel="noopener">bvsms.saude.gov.br (texto integral)</a>
+        <br><em style="font-size:.75rem;color:#64748b">Nota: esta RDC trata de rotulagem. Requisitos de fechamento herm&eacute;tico para alimentos s&atilde;o regulados por legisla&ccedil;&atilde;o espec&iacute;fica por categoria de produto (MAPA/ANVISA).</em>
+      </li>
+      <li>
+        <span class="ref-num">6</span>
+        <strong>Brasil — Decreto n&ordm; 9.013, de 29 de mar&ccedil;o de 2017 (RIISPOA)</strong> — <em>Regulamento de Inspe&ccedil;&atilde;o Industrial e Sanit&aacute;ria de Produtos de Origem Animal</em>. Di&aacute;rio Oficial da Uni&atilde;o, Bras&iacute;lia, 30 mar. 2017.
+        <br>&#128279; <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/decreto/d9013.htm" target="_blank" rel="noopener">planalto.gov.br/ccivil_03/_ato2015-2018/2017/decreto/d9013.htm</a>
+      </li>
+      <li>
+        <span class="ref-num">7</span>
+        <strong>BRCGS — Global Standard for Food Safety, Issue 9</strong>. British Retail Consortium Global Standards, Londres, 2022.
+        <br>&#128279; <a href="https://www.brcgs.com/standards/food-safety/" target="_blank" rel="noopener">brcgs.com/standards/food-safety/</a>
+      </li>
+      <li>
+        <span class="ref-num">8</span>
+        <strong>FSSC 22000 — Version 6</strong>. Foundation FSSC 22000, Gorinchem (Pa&iacute;ses Baixos), 2023.
+        <br>&#128279; <a href="https://www.fssc22000.com/scheme/scheme-documents/" target="_blank" rel="noopener">fssc22000.com/scheme/scheme-documents/</a>
+      </li>
+    </ul>
+    <p style="margin-top:1rem;font-size:.78rem;color:#64748b;font-style:italic">
+      &#128204; <strong>Nota:</strong> As refer&ecirc;ncias 2 e 3 s&atilde;o publica&ccedil;&otilde;es t&eacute;cnicas especializadas que n&atilde;o est&atilde;o dispon&iacute;veis gratuitamente online. As demais est&atilde;o acess&iacute;veis pelos links acima. Verifique sempre a vers&atilde;o mais recente de cada norma antes de aplicar.
+    </p>
+  </div>
 
   <!-- CTA -->
   <div class="cta-normas">
